@@ -1,0 +1,1 @@
+# Librerías para 08_generador_qr
