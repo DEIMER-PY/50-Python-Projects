@@ -1,16 +1,13 @@
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 
 def traducir_texto():
-    # Inicializamos el traductor
-    translator = Translator()
-    
     texto_a_traducir = input('¿Qué quieres traducir? ')
     
     try:
-        # Detectamos y traducimos a inglés
-        resultado = translator.translate(texto_a_traducir, src='es', dest='en')
+        # Usamos GoogleTranslator, que es muy estable
+        resultado = GoogleTranslator(source='es', target='en').translate(texto_a_traducir)
         
-        print(f"Traducción: {resultado.text}")
+        print(f"Traducción: {resultado}")
     except Exception as e:
         print(f"Error en la traducción: {e}")
 
